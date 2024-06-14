@@ -13,7 +13,7 @@ EB=eb.genrateEmbeddings("cuda")
 EB.get(pages_and_chunks_over_min_token_len[0])
 embeddings_df_save_path=EB.saveToCsv()"""
 SM=sm.search("text_chunks_and_embeddings_df.csv","cuda")
-LLM=llm.gemma("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")
+LLM=llm.gemma("api key")
 def setDialogue_template2(query:str,context_items:list[dict])->str:
         context="- "+"\n-".join([item["sentence_chunk"] for item in context_items])
         base_prompt= f"""
